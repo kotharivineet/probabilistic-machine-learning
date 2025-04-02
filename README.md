@@ -6,7 +6,10 @@ This repository explores different techniques to estimate the two types of uncer
 ## **Types of uncertainty**
 In machine learning, uncertainty is broadly categorized into aleatoric uncertainty and epistemic uncertainty.
 
-![Types of Uncertainty](./Figures/Types_of_Uncertainty.png)
+<p align="center">
+  <img src="Figures/Types_of_Uncertainty.png" style="width: 600px; height: auto;">
+</p>
+
 
 ### **Aleatoric Uncertainty**
 Aleatoric uncertainty arises from the inherent randomness or noise in the data itself. This type of uncertainty is irreducible, meaning it cannot be eliminated by collecting more data or refining the model. It captures variability due to factors such as measurement errors, sensor inaccuracies, or intrinsic randomness in the observed phenomena.
@@ -24,7 +27,9 @@ Epistemic uncertainty arises from a lack of knowledge about the model or data. I
 ## **Toy Regression**
 Toy regression can help in better conceptual understanding, visualisation and interpretation and can also help in the validation of models and methods. In this project, a simple training dataset of 10,000 data points is considered. The ground truth y is distributed according to Gaussian distribution N(0, 0.00004) and the input feature x is linearly spaced between 10 and -10. The data is visualised in the figure below.
 
-![Toy Data](./Figures/Toy_Dataset.png)
+<p align="center">
+  <img src="Figures/Toy_Dataset.png" style="width: 600px; height: auto;">
+</p>
 
 The test dataset is similarly distributed but contains 1000 data points and the input feature is linearly spaced between -15 and 15. The range was extended to see the performance of the methods on Out-of-the-Distribution (OOD) data with similar characteristics.
 
@@ -40,28 +45,36 @@ Monte Carlo (MC) Dropout is a method that uses dropout—a regularization techni
 
 * Provides epistemic uncertainty estimates.
 
-![MCD](./Figures/Monte_Carlo_Dropout.png)
+<p align="center">
+  <img src="Figures/Monte_Carlo_Dropout.png" style="width: 600px; height: auto;">
+</p>
 
 ### **Gaussian Approximation**
 This method models the output as a Gaussian distribution, allowing the model to predict both the mean and variance of the target variable. The Gaussian Negative Log Likelihood (GNLL) loss function is used during training to optimize both parameters.
 
 * Provides aleatoric uncertainty estimates.
 
-![GA](./Figures/Gaussian_Approximation.png)
+<p align="center">
+  <img src="Figures/Gaussian_Approximation.png" style="width: 600px; height: auto;">
+</p>
 
 ### **Ensembling**
 Ensembling combines predictions from multiple models trained independently. By aggregating outputs, it captures epistemic uncertainty through the variance across models.
 
 * Provides epistemic uncertainty estimates.
 
-![Ensemble](./Figures/Ensemble.png)
+<p align="center">
+  <img src="Figures/Ensemble.png" style="width: 600px; height: auto;">
+</p>
 
 ### **Gaussian Ensembles**
 This method integrates ensembling with Gaussian approximation, enabling simultaneous estimation of aleatoric and epistemic uncertainties. Each model predicts a Gaussian distribution, and ensemble predictions are aggregated.
 
 * Provides comprehensive uncertainty estimates (aleatoric + epistemic).
 
-![Gaussian Ensemble](./Figures/Gaussian_Ensemble.png)
+<p align="center">
+  <img src="Figures/Gaussian_Ensemble.png" style="width: 600px; height: auto;">
+</p>
 
 ---
 
